@@ -1,0 +1,184 @@
+Namste JS : 
+
+	-> Java Script is Synchronous Single Threaded language.
+	-> Which means java script execute only one cmd at a time in specific order one by one.
+	-> Everything in js happends inside a Execution Context.
+	=> Execution Context - devide in two parts 1. Memory Components  2.Code Components
+		1. Memory Components : contains key & value and memory components known as Variable Environment
+		IN Memory Components, all variables and functions created and asign undefined memory/value to it.
+		2. Code Components : contains code and code components knowns as Thread of Execution.
+		IN Code Components, execute line one by one and asign value to all variables in memory components.
+	-> after the complete code executeion to deleted whole Execution Context.
+	-> for new function create a create new execution context.
+	-> for new code to created new Execution Context. 
+
+
+	=> Call Stack : this is managing execution context creation, deletion and de-controlled.
+	-> call stack is a stack and every time bottom of the stack we have a Global Execution Context(GEC).
+	-> which means all the execution process push inside the stack.
+	-> function invoked and new execution context pushed inside the stack denoted by execution context 1. 
+	-> once execution context 1 is completed which is moved out and control goes back to GEC.
+	-> and whole code execution is done call stack is empty.
+
+
+	=> Hoisting : hoisting in javascript by which you can access this variables and functions even before you have 
+	     initialized or you have put some value init. 
+	-> you can acces it without any error.
+
+	-> shortest js file is empty file.
+	-> To run empty js file to java script create global execution context.
+	-> js engine also create something known as window.
+	-> window is actualy global object which is created along with the global exexution context.
+
+
+	=> Undefined : undefined is a special placeholder.
+	-> undefined means to variable has been declared but not given value.
+	 => Not-Defined : means variable can not defined.
+
+	
+	=> Scope : scope means where you can access a specific variable or function in our code.
+	-> Lexical environment is the local memory along with the lexical environment of its parent.
+	-> Lexical as a term means a hirarchy and in a sequence.
+	-> Example, function b inside of function a that simply called b is lexically inside of a and a is lexically inside of global space.
+
+
+	=> Let : Let and Const declaration are hoisted.
+	-> let is strict little more then var.
+	-> if you can create variable using Let keyword to do not make duplicate variable of this same name of variable.
+	-> if you try to create multiple variables using Let keyword it throws syntaxError. 
+	-> you can create variable using let keyword this variable store in any saparate space.
+	-> you can not access Let variable in temporal dead zone.
+	
+	=> Const : you can create variable using const keyword this variable store in any saparate space.
+	-> you assign the some value and can not change later.
+	-> It even more strict then Let.
+	-> you can not access Const variable in temporal dead zone.
+	-> you can try to assign some value later in const variable it throw systexError.
+	-> create const variable and assign some value but try to assign value later in same variable it throw typeError.
+
+	=>Var : using var keyword to you can create multiple variables of same name.
+	-> you can create variable using var keyword this variable store in global space.
+
+	=> Temporal Dead Zone : Is the time since when this Let variable whose hoisted and till it is initilize some value is the time between
+	     them know as temporal dead zone.
+	-> when ever you acces the variable in temporal dead zone it throw referenceError.
+	-> you can not access variable in temporal dead zone.
+
+	
+	=> Block Scope : All functions or variable who access inside of block known as block scope
+	-> you can create variable using let & const keyword this variable store in block scope .
+	-> you can not access let & const outside of the block scope.
+
+	=> Shadowing : if you have same named variable outside of block & inside of block knows shadows variable.
+	-> if you can create let & const variable of outside of block which stored in any saparate space.
+	-> you can create shadow of let using var it is a illegal shadow and it throws syntaxError.
+
+	
+	=> Closures : Function along with its lexical environment thats knows as closures.
+	-> In other words, a closure gives you access to an outer function's scope from an inner function. 
+	-> In JavaScript, closures are created every time a function is created, at function creation time.
+	-> In simple term, closures is function.
+
+	
+	=> Anonymous Function : A function without a name that is called anonymous function.
+	=> Function Statement : The function statement declares a function. 
+	-> function statement also knowns as function declaration they both are same.
+	=> Function Expression : The Javascript Function Expression is used to define a function inside any expression(define as a variable). 
+	-> you may pass function as a arguments.
+	=> First Class Function : First-class functions if functions in that language are treated like other variables.
+	-> So the functions can be assigned to any other variable or passed as an argument or can be returned by another function.
+	-> Java script treats as first class citizen.
+	=> Callback Function : a function passed in another function as a argument it is khown as callback function.
+
+
+	=> Event Loop : The job of event loop is check this callback queue and puts this function of this callback queue into the call stack.
+	-> event loop every time check to call stack empty or not if call stack is empty push functions of callback queue in call stack.
+	-> Microtask queue have more prioity to execute their task first.
+	-> after microtask queue task executed to callback queue task execute.
+	-> Callback queue sometimes calles task queue. 
+	-> if callback queue have less then task of microtask queue to first execute callback queue task.	
+
+	=> JS Runtime Environment : A runtime environment is where your program will be executed.
+	=> JavaScript Engine : java script engine is a heart of java script runtime environment.
+	-> first javascript engine developed by creator of javascript  him self.
+	-> js engine is not a machine.
+	-> how js engine works :- 
+		-> js engine takes code as a input. 
+		-> this code now goes to 3 steps : 
+			1. Parsing -  code which you like is broken down into tokens known as a syntax parser.
+					- syntax parser code into AST(Abstract Syntax Tree) and AST generate syntax tree. (www.astexplorer.net)
+			2. Compilation -  JIT(Just In Time) Compilation have both interpretter and compiler to compile code.
+						- AST goes in interpretter and interpretter convert high level code in byte code and moves to execution phase.
+						- interpretter take help to compiler to optimize the code.
+			3. Execution -  execution phase also have call stack and memeory heap, garbage collection.
+						- memory heap assign memory to all functions and variables.
+						- garbage collection free momory to memory heap.
+					
+	=> Mark & Sweep Algoritham : This algoritham assumes the knowledge of a set of objects called roots. in js the root is the global object.
+	=> V8 js engine :  
+	=> how Concurrency Model works : js concurrency model is based on as event loop, which executes the code and processes events. 		
+
+	=> Interpretter : takes a code and execute code line by line.
+	=> Compiler : your whole code compile even before execute. compiler optimize the code.
+		 
+	
+	=> Higher Order Functions : A function which takes another function as a arguments or return the function from it is which knows as ...
+	-> Map, Filter and Reduce are higher order function.
+	=> Map : map object are collection of key-value pair.
+	=> Filter : filter function used to filter values.
+	=>Reduce :   reduce in js is a predefined method used to reduce an array to a single value by passing a callback function on each element of the array.
+
+	
+	=> Callback Hall : callback is in another callback is in another callback.... this structure also known as piramid of doom.
+	-> callback are best way to handling async operation in js.
+	-> in js asynchronous program is exists because callback is exists.
+	-> while using callback we face 2 main problems : 
+		1. Callback Hall : callback inside callback inside callback a lot of nested callbacks and codes become unmaintainble.
+		2. Inversion of Control : a lose control of are program because we pass callback in another function now we have getting control of function to another function.
+
+	
+	=> Promises : a promises is an object representing the eventual complation (or failure) of an asynchronous operation. 
+	-> promises are used to handle async operations in js.
+	-> to handle callback hall problem to used promise chaining.
+	-> to handle error in promises use catch block.
+	-> to create a promises using new Promise constructor and it takes callback function as a arguments & callback function has 2 arguments
+	    1. resolve 2. reject using this we can only resolve or reject promise.
+	
+	=> Promise APIs : a four Promise APIs
+		1. Promise.all - if all promises success it give you collective result and if any one of them are fail whole promise chain fails.
+		 -> it will not wait for other promises.
+		 -> it kind of fails fast.
+		2. Promise.allsetteled- it wait for all promises to setteled. 
+		 -> if all promises success it give you collective result and if any one of them fail it give fail result and waits for other promise to success and give result.
+		 -> it waits for all result and give result success & fail.
+		3. Promise.race : it give you the value of the first setteled promise.
+		 -> if any promise are fail first it give error first.
+		 -> it will not wait to other promises to setteled.
+		4. Promise.any : it will wait for the first success promise.
+		 -> if any promise are fail it will ignore and wait for other promise to success first.
+		 -> if all promises are fail it will return AggregateError and AggregateError is All Promises were rejected.
+		 -> if all promises are fail it gives list of all errors.
+	-> setteled means resolve or reject, success or failure, fulfilled or rejected.
+	-> when you does not use async await js engine will not waits for promise to be resolved.
+
+	
+	=> Async : Async is a keyword to use before a create Async function.
+	-> async function - this async function always return a promise.
+	-> if you return a any value it will automatically wrapped inside a promise.
+	-> if you return promise that it will not wrapped inside a promise.
+	=> Await : Async and Await combo is used to handle promises.
+	-> await is a keyword it can only be used inside a async function. 
+	-> when you use async await js engine waits for promise to be resolved.
+
+
+	=> This Keyword : This and window are same.
+	-> without strict mode in the global space or functional space this keyword always represent the global object (window).
+	-> this keyword work differently in strict mode or non-strict mode.
+	-> with strict mode in the global space this keyword always represent the global object (window).
+	-> with strict mode in the functional space this keyword represent value of undefined.
+	-> if you are in function the value of this keyword is depends on strict / non-strict mode 
+	-> this keyword inside non-strict mode is known as this substitution.
+	-> if the value of this keyword is undefined or null this keyword will be replaced with global object only in non-strict mode.
+	-> if you are in object the value of this keyword is object.
+	-> arrow function don't have their own this it retains the this value of the lexical environment.
+	-> 
