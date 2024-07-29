@@ -181,4 +181,3 @@ Namste JS :
 	-> if the value of this keyword is undefined or null this keyword will be replaced with global object only in non-strict mode.
 	-> if you are in object the value of this keyword is object.
 	-> arrow function don't have their own this it retains the this value of the lexical environment.
-	-> 
