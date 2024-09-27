@@ -42,7 +42,7 @@ Namste JS :
 	-> Example, function b inside of function a that simply called b is lexically inside of a and a is lexically inside of global space.
 
 
-	=> Let : Let and Const declaration are hoisted.
+	=> Let : Let and Const declaration are not hoisted.
 	-> let is strict little more then var.
 	-> if you can create variable using Let keyword to do not make duplicate variable of this same name of variable.
 	-> if you try to create multiple variables using Let keyword it throws syntaxError. 
@@ -58,6 +58,7 @@ Namste JS :
 
 	=>Var : using var keyword to you can create multiple variables of same name.
 	-> you can create variable using var keyword this variable store in global space.
+        -> var keyword support variation hoisting.
 
 	=> Temporal Dead Zone : Is the time since when this Let variable whose hoisted and till it is initilize some value is the time between
 	     them know as temporal dead zone.
