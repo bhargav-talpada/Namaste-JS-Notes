@@ -58,7 +58,7 @@ Namste JS :
 
 	=>Var : using var keyword to you can create multiple variables of same name.
 	-> you can create variable using var keyword this variable store in global space.
-        -> var keyword support variation hoisting.
+        -> var keyword support variable hoisting.
 
 	=> Temporal Dead Zone : Is the time since when this Let variable whose hoisted and till it is initilize some value is the time between
 	     them know as temporal dead zone.
